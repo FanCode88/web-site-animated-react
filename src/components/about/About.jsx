@@ -1,11 +1,15 @@
 import './about.scss';
 import contact from '/about.jpg';
+import contact2 from '/ab1.jpg';
+import contact3 from '/ab2.jpg';
 
 const About = () => {
   return (
     <div className='about'>
       <div className='aboutUs'>
+        <img src={contact2} alt="contact2" />
         <img src={contact} alt='contactUs' />
+        <img src={contact3} alt="contact4" />
         <h1>About Us</h1>
         <p>
           At [Your Company], we are passionate about creating unique digital
