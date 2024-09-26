@@ -16,7 +16,7 @@ const Navbar = () => {
         </motion.span>
         <div className='social'>
           <a href='#'>
-            <img src='/facebook.png' alt='' />
+            <img src='/facebook.svg' alt='' />
           </a>
           <a href='#'>
             <img src='/instagram.png' alt='' />
@@ -24,7 +24,7 @@ const Navbar = () => {
           <a href='#'>
             <img src='/youtube.png' alt='' />
           </a>
-          <a href='#'>
+          <a href='https://github.com/FanCode88?tab=repositories'>
             <img src='/dribbble.png' alt='' />
           </a>
         </div>

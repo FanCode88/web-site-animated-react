@@ -7,13 +7,13 @@
   background: linear-gradient(180deg, #0c0c1d, #111132);
   width: 100%;
   height: 100%;
-  border: 2px solid #ffff;
+  // border: 2px solid #ffff;
   padding: 10px;
   position: relative;
 
   .aboutUs {
     max-width: 1366px;
-    position: absolute;
+    position: absolute; 
     margin: 50px 50px;
     right: 10px;
 
@@ -28,6 +28,7 @@
       margin: 20px;
       transition: 0.3s ease-out;
       border: 2px solid #ffff;
+      cursor: default;
 
       &:hover {
         transform: scale(1.1);
@@ -36,10 +37,13 @@
 
     h1 {
       font-size: 60px;
+      margin-bottom: 20px;
+      cursor: default;
     }
 
     p {
       font-size: 24px;
+      cursor: default;
     }
   }
 }
