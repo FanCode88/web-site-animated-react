@@ -10,6 +10,8 @@
     max-width: 1366px;
     height: 100%;
     margin: auto;
+    position: relative;
+    z-index: 10;
 
     .textContainer {
       width: 50%;
@@ -63,6 +65,7 @@
           letter-spacing: 2px;
           margin-right: 20px;
           font-size: 15px;
+          cursor: pointer;
         }
       }
     }
