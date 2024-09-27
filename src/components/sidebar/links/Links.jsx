@@ -1,4 +1,6 @@
 import { motion } from 'framer-motion';
+import Settings from '/set.png';
+import './links.scss';
 
 const variants = {
   open: {
@@ -40,6 +42,7 @@ const Links = () => {
           {item}
         </motion.a>
       ))}
+      <img src={Settings} alt='' />
     </motion.div>
   );
 };

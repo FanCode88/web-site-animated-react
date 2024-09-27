@@ -9,7 +9,7 @@
     left: 0;
     padding-top: 50px;
     text-align: center;
-    color: orange;
+    color: #131720;
     font-size: 36px;
 
     .progressBar {
@@ -89,6 +89,7 @@
 
         h2 {
           font-size: 72px;
+          color: #131720;
 
           @include mobile {
             font-size: 56px;
@@ -100,7 +101,7 @@
         }
 
         p {
-          color: gray;
+          color: #131720;
           font-size: 20px;
           text-align: start;
 

@@ -23,6 +23,7 @@ const textVariants = {
     transition: {
       duration: 2,
       repeat: Infinity,
+      stroke: 'black',
     },
   },
 };

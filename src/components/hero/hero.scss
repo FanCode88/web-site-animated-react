@@ -2,7 +2,13 @@
 
 .hero {
   height: calc(100vh - 100px);
-  background: linear-gradient(180deg, #0c0c1d, #111132);
+  // background: linear-gradient(180deg, #0c0c1d, #111132);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 105, 121, 1) 0%,
+    rgba(0, 212, 255, 1) 100%
+  );
   overflow: hidden;
   position: relative;
 
@@ -35,12 +41,13 @@
 
       h2 {
         font-size: 30px;
-        color: rebeccapurple;
+        color: darkmagenta;
         letter-spacing: 10px;
       }
 
       h1 {
         font-size: 88px;
+        color: #131720;
 
         @include tablet {
           font-size: 56px;
@@ -53,14 +60,16 @@
 
       img {
         width: 50px;
+        // background: #131720;
       }
 
       .buttons {
         button {
           padding: 20px;
-          border: 1px solid white;
+          border: 2px solid #131720;
           background: transparent;
-          color: white;
+          color: #131720;
+          font-weight: bold;
           border-radius: 5px;
           letter-spacing: 2px;
           margin-right: 20px;
