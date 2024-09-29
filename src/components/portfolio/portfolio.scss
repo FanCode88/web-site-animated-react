@@ -12,10 +12,19 @@
     color: #131720;
     font-size: 36px;
 
+    @include tablet {
+      font-size: 24px;
+    }
+
     .progressBar {
       border-radius: 5px;
       height: 10px;
       background: white;
+
+      @include tablet {
+        border-radius: 2px;
+        height: 5px;
+      }
     }
   }
 
@@ -43,6 +52,10 @@
       align-items: center;
       justify-content: center;
 
+      @include tablet {
+        padding: 20px;
+      }
+
       @include mobile {
         flex-direction: column;
       }
@@ -65,6 +78,11 @@
           // width: 100%;
           object-fit: cover;
           border-radius: 10px;
+
+          @include tablet {
+            width: 300px;
+            height: 300px;
+          }
 
           @include mobile {
             object-fit: contain;
@@ -90,6 +108,10 @@
         h2 {
           font-size: 72px;
           color: #131720;
+
+          @include tablet {
+            font-size: 44px;
+          }
 
           @include mobile {
             font-size: 56px;
