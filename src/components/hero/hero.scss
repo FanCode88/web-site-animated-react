@@ -43,6 +43,11 @@
         font-size: 30px;
         color: darkmagenta;
         letter-spacing: 10px;
+
+        @include tablet {
+          font-size: 26px;
+          font-weight: bold;
+        }
       }
 
       h1 {
@@ -64,8 +69,11 @@
       }
 
       .buttons {
+        @include tablet {
+          font-size: 56px;
+        }
         button {
-          padding: 20px;
+          padding: 15px;
           border: 2px solid #131720;
           background: transparent;
           color: #131720;
@@ -73,7 +81,7 @@
           border-radius: 5px;
           letter-spacing: 2px;
           margin-right: 20px;
-          font-size: 15px;
+          font-size: 16px;
           cursor: pointer;
         }
       }

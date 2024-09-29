@@ -9,12 +9,17 @@
   gap: 50px;
   // justify-content: space-between;
 
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+  }
+
   @include mobile {
     flex-direction: column;
   }
 
   @include tablet {
-    padding: 40px;
+    padding: 80px;
   }
 
   .textContainer {
@@ -31,6 +36,10 @@
       font-size: 100px;
       line-height: 0.9;
       color: #131720;
+
+      @include tablet {
+        display: none;
+      }
 
       @include mobile {
         font-size: 52px;
@@ -78,6 +87,13 @@
       flex-direction: column;
       align-items: center;
       gap: 40px;
+
+      @include tablet {
+        border: 1px solid #131720;
+        border-radius: 19px;
+        padding: 20px;
+        box-shadow: 0px 0px 22px 9px rgba(0,0,0,0.13);
+      }
 
       @include mobile {
         gap: 10px;

@@ -28,6 +28,10 @@
       color: #131720;
       cursor: default;
 
+      @include tablet {
+        margin-left: 35px;
+      }
+
       @include mobile {
         display: none;
       }
