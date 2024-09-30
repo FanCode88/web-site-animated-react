@@ -30,6 +30,10 @@ const itemVariants = {
 const Links = () => {
   const items = ['Homepage', 'Services', 'Portfolio', 'Contact', 'About'];
 
+  const handleSettingsClick = () => {
+    window.location.hash = '#Settings';
+  };
+
   return (
     <motion.div className='links' variants={variants}>
       {items.map((item) => (
@@ -42,7 +46,18 @@ const Links = () => {
           {item}
         </motion.a>
       ))}
-      <img src={Settings} alt='' />
+      <motion.img
+        src={Settings}
+        alt='Settings'
+        onClick={handleSettingsClick}
+        whileHover={{
+          scale: 1.1,
+          transition: {
+            duration: 0.1,
+            ease: 'easeIn',
+          },
+        }}
+      />
     </motion.div>
   );
 };

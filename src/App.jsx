@@ -7,6 +7,7 @@ import Navbar from './components/navbar/Navbar';
 import Parallax from './components/parallax/Parallax';
 import Portfolio from './components/portfolio/Portfolio';
 import Services from './components/services/Services';
+import Settings from './components/settings/Settings';
 const App = () => {
   return (
     <div>
@@ -30,6 +31,9 @@ const App = () => {
       </section>
       <section id='About'>
         <About />
+      </section>
+      <section id='Settings'>
+        <Settings />
       </section>
     </div>
   );
