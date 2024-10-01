@@ -1,3 +1,76 @@
-@import '../../app.scss';
+.settings {
+  display: flex;
+  // text-align: center;
+  justify-content: center;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
 
-.settings{}
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #131720;
+    font-size: 36px;
+    letter-spacing: 2px;
+  }
+
+  .settings-form {
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    height: 600px;
+    backdrop-filter: blur(50px);
+    border-radius: 19px;
+    border: 1px solid #131720;
+
+    .form-group {
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      min-height: 15vh;
+
+      label {
+        padding: 10px;
+        font-weight: bold;
+        color: #131720;
+        font-size: 16px;
+      }
+
+      input[type='password'],
+      input[type='text'] {
+        width: 350px;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        outline: none;
+      }
+
+      input[type='checkbox'] {
+        margin-left: 10px;
+        transform: scale(1.2);
+      }
+    }
+
+    button {
+      background-color: #131720;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      width: 250px;
+      height: 40px;
+      margin-top: 40px;
+      outline: none;
+
+      &:hover {
+        background-color: #fff;
+        color: #131720;
+      }
+    }
+  }
+}
