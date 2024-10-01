@@ -7,6 +7,7 @@
   display: flex;
   align-items: center;
   gap: 50px;
+  cursor: default;
   // justify-content: space-between;
 
   @include tablet {
@@ -108,7 +109,7 @@
         border-radius: 5px;
         font-size: 15px;
         background: transparent;
-        color: white;
+        color: #131720;
 
         &::placeholder {
           color: #131720;
