@@ -1,6 +1,7 @@
 import './hero.scss';
 import { motion } from 'framer-motion';
 import hero from '/hero2.png';
+import scrollIcon from '/scroll.png'; //
 
 const textVariants = {
   initial: {
@@ -16,14 +17,19 @@ const textVariants = {
       staggerChildren: 0.1,
     },
   },
+};
 
-  scroollButton: {
+const scrollButtonVariants = {
+  initial: {
     opacity: 0,
     y: 10,
+  },
+  animate: {
+    opacity: 1,
+    y: 0,
     transition: {
       duration: 2,
       repeat: Infinity,
-      stroke: 'black',
     },
   },
 };
@@ -41,6 +47,11 @@ const sliderVariants = {
     },
   },
 };
+
+const handleContactClick = () => {
+  window.location.hash = '#Contact';
+};
+
 const Hero = () => {
   return (
     <div className='hero'>
@@ -51,21 +62,24 @@ const Hero = () => {
           initial='initial'
           animate='animate'
         >
-          <motion.h2 variants={textVariants}>SACEANU IONUT</motion.h2>
-          <motion.h1 variants={textVariants}>
-            Web Developer and UI designer
-          </motion.h1>
+          <motion.h1 variants={textVariants}>SACEANU IONUT</motion.h1>
+          <motion.h2 variants={textVariants}>
+            Web Developer and UI Designer
+          </motion.h2>
           <div className='buttons'>
             <motion.button variants={textVariants}>
               See the Latest Works
             </motion.button>
-            <motion.button variants={textVariants}>Contact Me</motion.button>
+            <motion.button variants={textVariants} onClick={handleContactClick}>
+              Contact Me
+            </motion.button>
           </div>
           <motion.img
-            variants={textVariants}
-            animate='scroollButton'
-            src='/scroll.png'
-            alt=''
+            variants={scrollButtonVariants}
+            initial='initial'
+            animate='animate'
+            src={scrollIcon}
+            alt='Scroll down icon'
           />
         </motion.div>
       </div>
@@ -78,7 +92,7 @@ const Hero = () => {
         Writer Content Creator Influence
       </motion.div>
       <div className='imageContainer'>
-        <img src={hero} alt='' />
+        <img src={hero} alt='Hero Image' />
       </div>
     </div>
   );
