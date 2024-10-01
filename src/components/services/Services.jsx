@@ -21,18 +21,43 @@ const variants = {
 
 const Services = () => {
   const ref = useRef();
-
   const isInView = useInView(ref, { margin: '-100px' });
+
+  // Sample service data
+  const services = [
+    {
+      id: 1,
+      title: 'Branding',
+      description:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis quod reprehenderit eum aspernatur ab dignissimos amet maxime natus! Beatae, a!',
+    },
+    {
+      id: 2,
+      title: 'Web Design',
+      description:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis quod reprehenderit eum aspernatur ab dignissimos amet maxime natus! Beatae, a!',
+    },
+    {
+      id: 3,
+      title: 'Marketing',
+      description:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis quod reprehenderit eum aspernatur ab dignissimos amet maxime natus! Beatae, a!',
+    },
+    {
+      id: 4,
+      title: 'Consulting',
+      description:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis quod reprehenderit eum aspernatur ab dignissimos amet maxime natus! Beatae, a!',
+    },
+  ];
 
   return (
     <motion.div
       className='services'
       variants={variants}
       initial='initial'
-      // animate='animate'
-      // whileInView="animate"
       ref={ref}
-      animate={'animate'}
+      animate={isInView ? 'animate' : 'initial'} // Conditional animation
     >
       <motion.div className='textContainer' variants={variants}>
         <p>
@@ -40,9 +65,10 @@ const Services = () => {
         </p>
         <hr />
       </motion.div>
+
       <motion.div className='titleContainer' variants={variants}>
         <div className='title'>
-          <img src='/people.webp' alt='' />
+          <img src='/people.webp' alt='People collaborating' />
           <h1>
             <motion.b whileHover={{ color: 'orange' }}>Unique </motion.b>
             Ideas
@@ -56,55 +82,19 @@ const Services = () => {
           <button>What we do?</button>
         </div>
       </motion.div>
+
       <motion.div className='listContainer' variants={variants}>
-        <motion.div
-          className='box'
-          whileHover={{ background: 'lightgray', color: 'black' }}
-        >
-          <h2>Branding</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
-            quod reprehenderit eum aspernatur ab dignissimos amet maxime natus!
-            Beatae, a!
-          </p>
-          <button>Go</button>
-        </motion.div>
-        <motion.div
-          className='box'
-          whileHover={{ background: 'lightgray', color: 'black' }}
-        >
-          <h2>Branding</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
-            quod reprehenderit eum aspernatur ab dignissimos amet maxime natus!
-            Beatae, a!
-          </p>
-          <button>Go</button>
-        </motion.div>
-        <motion.div
-          className='box'
-          whileHover={{ background: 'lightgray', color: 'black' }}
-        >
-          <h2>Branding</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
-            quod reprehenderit eum aspernatur ab dignissimos amet maxime natus!
-            Beatae, a!
-          </p>
-          <button>Go</button>
-        </motion.div>
-        <motion.div
-          className='box'
-          whileHover={{ background: 'lightgray', color: 'black' }}
-        >
-          <h2>Branding</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
-            quod reprehenderit eum aspernatur ab dignissimos amet maxime natus!
-            Beatae, a!
-          </p>
-          <button>Go</button>
-        </motion.div>
+        {services.map((service) => (
+          <motion.div
+            className='box'
+            key={service.id} // Unique key for each service box
+            whileHover={{ background: 'lightgray', color: 'black' }}
+          >
+            <h2>{service.title}</h2>
+            <p>{service.description}</p>
+            <button>Go</button>
+          </motion.div>
+        ))}
       </motion.div>
     </motion.div>
   );
