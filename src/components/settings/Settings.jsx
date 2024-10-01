@@ -8,7 +8,7 @@ const Settings = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Aici poți adăuga logica pentru procesarea setărilor (validare, trimitere la server etc.)
+
     if (password !== confirmPassword) {
       alert('Parolele nu coincid!');
       return;
@@ -21,7 +21,7 @@ const Settings = () => {
       <h1>Settings</h1>
       <form className='settings-form' onSubmit={handleSubmit}>
         <div className='form-group'>
-          <label htmlFor='emailNotifications'>Notificări prin email:</label>
+          <label htmlFor='emailNotifications'>Email notification:</label>
           <input
             type='checkbox'
             id='emailNotifications'
@@ -30,25 +30,25 @@ const Settings = () => {
           />
         </div>
         <div className='form-group'>
-          <label htmlFor='password'>Schimbă parola:</label>
+          <label htmlFor='password'>Change password:</label>
           <input
             type='password'
             id='password'
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            placeholder='Introdu noua parolă'
+            placeholder='Enter new password'
           />
         </div>
         <div className='form-group'>
-          <label htmlFor='confirmPassword'>Confirmă parola:</label>
+          <label htmlFor='confirmPassword'>Confirm password:</label>
           <input
             type='password'
             id='confirmPassword'
             value={confirmPassword}
             onChange={(e) => setConfirmPassword(e.target.value)}
-            placeholder='Confirmă noua parolă'
+            placeholder='Confirm new password'
           />
-          <button type='submit'>Salvează setările</button>
+          <button type='submit'>Save</button>
         </div>
       </form>
     </div>
