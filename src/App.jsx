@@ -8,6 +8,8 @@ import Parallax from './components/parallax/Parallax';
 import Portfolio from './components/portfolio/Portfolio';
 import Services from './components/services/Services';
 import Settings from './components/settings/Settings';
+import WhatWeDo from './components/whatwedo/WhatWeDo';
+
 const App = () => {
   return (
     <div>
@@ -31,6 +33,9 @@ const App = () => {
       </section>
       <section id='About'>
         <About />
+      </section>
+      <section id='WhatWeDo'>
+        <WhatWeDo />
       </section>
       <section id='Settings'>
         <Settings />

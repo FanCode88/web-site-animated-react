@@ -2,6 +2,7 @@ import { useRef } from 'react';
 import './services.scss';
 import { motion, useInView } from 'framer-motion';
 
+// Animation variants
 const variants = {
   initial: {
     x: -200,
@@ -29,27 +30,32 @@ const Services = () => {
       id: 1,
       title: 'Branding',
       description:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis quod reprehenderit eum aspernatur ab dignissimos amet maxime natus! Beatae, a!',
+        'We create a unique identity for your brand to make a lasting impression.',
     },
     {
       id: 2,
       title: 'Web Design',
       description:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis quod reprehenderit eum aspernatur ab dignissimos amet maxime natus! Beatae, a!',
+        'Beautiful and responsive designs that drive engagement and growth.',
     },
     {
       id: 3,
       title: 'Marketing',
       description:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis quod reprehenderit eum aspernatur ab dignissimos amet maxime natus! Beatae, a!',
+        'Effective strategies to reach your target audience and grow your business.',
     },
     {
       id: 4,
       title: 'Consulting',
       description:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis quod reprehenderit eum aspernatur ab dignissimos amet maxime natus! Beatae, a!',
+        'Expert advice to help you navigate your business challenges and opportunities.',
     },
   ];
+
+  // Smooth scroll to the #Projects section
+  const handleWhatWeDoClick = () => {
+    window.location.hash = '#WhatWeDo';
+  };
 
   return (
     <motion.div
@@ -61,14 +67,14 @@ const Services = () => {
     >
       <motion.div className='textContainer' variants={variants}>
         <p>
-          I focus on helping your brand grow <br></br>and move forward
+          We focus on helping your brand grow <br></br>and move forward.
         </p>
         <hr />
       </motion.div>
 
       <motion.div className='titleContainer' variants={variants}>
         <div className='title'>
-          <img src='/people.webp' alt='People collaborating' />
+          <img src='/people.webp' alt='Collaboration and teamwork' />
           <h1>
             <motion.b whileHover={{ color: 'orange' }}>Unique </motion.b>
             Ideas
@@ -79,7 +85,7 @@ const Services = () => {
             <motion.b whileHover={{ color: 'orange' }}>For Your </motion.b>
             Business.
           </h1>
-          <button>What we do?</button>
+          <button onClick={handleWhatWeDoClick}>What we do?</button>
         </div>
       </motion.div>
 
@@ -92,7 +98,7 @@ const Services = () => {
           >
             <h2>{service.title}</h2>
             <p>{service.description}</p>
-            <button>Go</button>
+            <button>Learn More</button>
           </motion.div>
         ))}
       </motion.div>
