@@ -52,6 +52,10 @@ const handleContactClick = () => {
   window.location.hash = '#Contact';
 };
 
+const handleLatestWorksClick = () => {
+  window.location.hash = '#Portfolio';
+};
+
 const Hero = () => {
   return (
     <div className='hero'>
@@ -67,7 +71,10 @@ const Hero = () => {
             Web Developer and UI Designer
           </motion.h2>
           <div className='buttons'>
-            <motion.button variants={textVariants}>
+            <motion.button
+              variants={textVariants}
+              onClick={handleLatestWorksClick}
+            >
               See the Latest Works
             </motion.button>
             <motion.button variants={textVariants} onClick={handleContactClick}>

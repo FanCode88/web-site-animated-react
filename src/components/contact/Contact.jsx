@@ -10,7 +10,6 @@ const variants = {
   animate: {
     y: 0,
     opacity: 1,
-
     transition: {
       duration: 0.3,
       staggerChildren: 0.1,
@@ -18,10 +17,29 @@ const variants = {
   },
 };
 
+const handleScrollPosition = (e, hash) => {
+  e.preventDefault();
+  const scrollPosition = window.scrollY;
+  window.history.pushState({ scrollPosition }, '', hash);
+  const target = document.getElementById(hash.substring(1));
+  if (target) {
+    target.scrollIntoView({ behavior: 'smooth' });
+  }
+};
+
+window.onpopstate = (event) => {
+  if (event.state && event.state.scrollPosition !== undefined) {
+    window.scrollTo(0, event.state.scrollPosition);
+  } else {
+    window.scrollTo(0, 0);
+  }
+};
+
 const Contact = () => {
   const ref = useRef();
 
   const isInView = useInView(ref, { margin: '-100px' });
+
   return (
     <motion.div
       ref={ref}
@@ -37,7 +55,7 @@ const Contact = () => {
           <span>jupanu@mail.com</span>
         </motion.div>
         <motion.div className='item' variants={variants}>
-          <h2>Adress</h2>
+          <h2>Address</h2>
           <span>Str. No Name 123</span>
         </motion.div>
         <motion.div className='item' variants={variants}>

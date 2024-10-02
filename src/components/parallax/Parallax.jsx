@@ -2,6 +2,24 @@ import { useRef } from 'react';
 import './parallax.scss';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
+const handleScrollPosition = (e, hash) => {
+  e.preventDefault();
+  const scrollPosition = window.scrollY;
+  window.history.pushState({ scrollPosition }, '', hash);
+  const target = document.getElementById(hash.substring(1));
+  if (target) {
+    target.scrollIntoView({ behavior: 'smooth' });
+  }
+};
+
+window.onpopstate = (event) => {
+  if (event.state && event.state.scrollPosition !== undefined) {
+    window.scrollTo(0, event.state.scrollPosition);
+  } else {
+    window.scrollTo(0, 0);
+  }
+};
+
 const Parallax = ({ type }) => {
   const ref = useRef();
 
@@ -43,3 +61,31 @@ const Parallax = ({ type }) => {
 };
 
 export default Parallax;
+
+const Navigation = () => {
+  return (
+    <div>
+      <button onClick={(e) => handleScrollPosition(e, '#Contact')}>
+        Contact
+      </button>
+      <button onClick={(e) => handleScrollPosition(e, '#Portfolio')}>
+        Portfolio
+      </button>
+    </div>
+  );
+};
+
+const App = () => {
+  return (
+    <div>
+      <Navigation />
+      <Parallax type='services' />
+      <div id='Contact' style={{ height: '100vh' }}>
+        Contact Section
+      </div>
+      <div id='Portfolio' style={{ height: '100vh' }}>
+        Portfolio Section
+      </div>
+    </div>
+  );
+};
