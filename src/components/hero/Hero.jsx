@@ -77,7 +77,7 @@ const Hero = () => {
             >
               See the Latest Works
             </motion.button>
-            <motion.button variants={textVariants} onClick={handleContactClick}>
+            <motion.button className="btnContact"variants={textVariants} onClick={handleContactClick}>
               Contact Me
             </motion.button>
           </div>

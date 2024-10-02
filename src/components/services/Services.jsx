@@ -87,7 +87,7 @@ const Services = () => {
         {services.map((service) => (
           <motion.div
             className='box'
-            key={service.id} // Unique key for each service box
+            key={service.id}
             whileHover={{ background: 'lightgray', color: 'black' }}
           >
             <h2>{service.title}</h2>

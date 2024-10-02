@@ -72,10 +72,8 @@
 
         img {
           flex: 1;
-          width: 400px;
-          height: 400px;
-          // height: 50%;
-          // width: 100%;
+          width: 600px;
+          height: 600px;
           object-fit: cover;
           border-radius: 10px;
 
@@ -140,11 +138,17 @@
           outline: none;
           background: orange;
           font-size: 16px;
+          font-weight: bold;
           border-radius: 5px;
           display: flex;
           align-items: center;
           justify-content: center;
           cursor: pointer;
+
+          &:hover {
+            background: #131720;
+            color: orange;
+          }
 
           @include mobile {
             width: 150px;
