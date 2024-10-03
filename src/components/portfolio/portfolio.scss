@@ -76,6 +76,11 @@
           height: 600px;
           object-fit: cover;
           border-radius: 10px;
+          transition: ease-in-out 2s;
+
+          &:hover {
+            transform: scale(0.9);
+          }
 
           @include tablet {
             width: 300px;
@@ -137,6 +142,7 @@
           border: none;
           outline: none;
           background: orange;
+          color: #131720;
           font-size: 16px;
           font-weight: bold;
           border-radius: 5px;

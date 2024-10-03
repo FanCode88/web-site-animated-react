@@ -39,6 +39,13 @@ const Single = ({ item }) => {
 
   const y = useTransform(scrollYProgress, [0, 1], [-300, 300]);
 
+  const handleDemoClick = () => {
+    const demoSection = document.getElementById('Demo');
+    if (demoSection) {
+      demoSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section>
       <div className='container'>
@@ -49,7 +56,7 @@ const Single = ({ item }) => {
           <motion.div className='textContainer' style={{ y }} ref={ref}>
             <h2>{item.title}</h2>
             <p>{item.desc}</p>
-            <button>See Demo</button>
+            <button onClick={handleDemoClick}>See Demo</button>
           </motion.div>
         </div>
       </div>

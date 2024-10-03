@@ -11,6 +11,7 @@
   h1 {
     font-size: 100px;
     padding: 20px;
+    color: orange;
 
     @include tablet {
       font-size: 50px;

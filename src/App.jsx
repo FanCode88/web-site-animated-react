@@ -2,6 +2,7 @@ import './app.scss';
 import About from './components/about/About';
 import Contact from './components/contact/Contact';
 import Cursor from './components/cursor/Cursor';
+import Demo from './components/demo/Demo';
 import Hero from './components/hero/Hero';
 import Navbar from './components/navbar/Navbar';
 import Parallax from './components/parallax/Parallax';
@@ -36,6 +37,9 @@ const App = () => {
       </section>
       <section id='WhatWeDo'>
         <WhatWeDo />
+      </section>
+      <section id='Demo'>
+        <Demo />
       </section>
       <section id='Settings'>
         <Settings />

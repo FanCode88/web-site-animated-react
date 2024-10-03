@@ -8,12 +8,12 @@
 
     h1 {
       color: orange;
-      font-size: 32px;
+      font-size: 42px;
       font-weight: bold;
       letter-spacing: 4px;
     }
     p {
-      font-size: 16px;
+      font-size: 22px;
     }
   }
 
@@ -24,7 +24,7 @@
       text-align: center;
       margin-bottom: 40px;
       color: #131720;
-      font-size: 36px;
+      font-size: 42px;
     }
 
     .service-container {
@@ -35,13 +35,14 @@
 
     .service-card {
       width: 30%;
-      background-color: #fff;
+      border: none;
       padding: 20px;
       border-radius: 5px;
       text-align: center;
       margin-bottom: 20px;
-      box-shadow: 0px 0px 22px 9px rgba(0, 0, 0, 0.23);
+      box-shadow: 0px 0px 22px 9px rgba(0, 0, 0, 0.43);
       transition: ease-in-out 0.3s;
+      cursor: default;
 
       &:hover {
         transform: translateY(-10px);
@@ -49,11 +50,12 @@
       }
 
       h3 {
+        font-size: 28px;
         color: #131720;
       }
 
       p {
-        color: #555;
+        color: #131720;
       }
 
       .icon {
@@ -67,7 +69,7 @@
   .cta {
     text-align: center;
     padding: 50px;
-    color: white;
+    color: orange;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -98,7 +100,6 @@
   }
 }
 
-/* Projects Component Styles */
 .projects-page {
   padding: 40px;
   background-color: #f9f9f9;

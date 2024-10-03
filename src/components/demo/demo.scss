@@ -1,0 +1,65 @@
+/* demo.scss */
+.demo {
+  padding: 20px;
+  background-color: #eaeaea;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+  gap: 30px;
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 105, 121, 1) 0%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  cursor: default;
+
+  .product {
+    box-shadow: 0px 0px 22px 9px rgba(0, 0, 0, 0.43);
+    background: transparent;
+    border: none;
+    padding: 40px;
+    border-radius: 5px;
+    width: 300px;
+    height: 300px§;
+  }
+}
+
+.demo h1 {
+  color: orange;
+  font-size: 62px;
+}
+
+.demo p {
+  color: #131720;
+  font-size: 26px;
+}
+
+.demo input {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  width: 400px;
+  height: 40px;
+  font-size: 16px;
+}
+
+.demo-button {
+  background-color: #131720;
+  padding: 15px 25px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.demo-button:hover {
+  background-color: #fff;
+  color: #131720;
+}

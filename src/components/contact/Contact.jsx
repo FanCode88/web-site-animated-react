@@ -17,16 +17,6 @@ const variants = {
   },
 };
 
-const handleScrollPosition = (e, hash) => {
-  e.preventDefault();
-  const scrollPosition = window.scrollY;
-  window.history.pushState({ scrollPosition }, '', hash);
-  const target = document.getElementById(hash.substring(1));
-  if (target) {
-    target.scrollIntoView({ behavior: 'smooth' });
-  }
-};
-
 window.onpopstate = (event) => {
   if (event.state && event.state.scrollPosition !== undefined) {
     window.scrollTo(0, event.state.scrollPosition);
