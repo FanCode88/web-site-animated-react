@@ -2,7 +2,6 @@
 
 .hero {
   height: calc(100vh - 100px);
-  // background: linear-gradient(180deg, #0c0c1d, #111132);
   background: linear-gradient(
     90deg,
     rgba(2, 0, 36, 1) 0%,
@@ -42,7 +41,7 @@
 
       h2 {
         font-size: 30px;
-        color: darkmagenta;
+        color: #430f58;
         letter-spacing: 10px;
 
         @include tablet {
@@ -53,8 +52,9 @@
 
       h1 {
         font-size: 88px;
-        color: #131720;
+        color: #162938;
         letter-spacing: 10px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
 
         @include tablet {
           font-size: 56px;

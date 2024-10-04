@@ -1,4 +1,3 @@
-// Product.jsx
 import './product.scss';
 
 const Product = ({ products }) => {

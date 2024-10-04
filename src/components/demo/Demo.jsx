@@ -4,10 +4,10 @@ import './demo.scss';
 import Product from '../product/Product';
 
 const initialProducts = [
-  { id: 1, name: 'Produs 1', price: 100, category: 'Electronics' },
-  { id: 2, name: 'Produs 2', price: 200, category: 'Books' },
-  { id: 3, name: 'Produs 3', price: 300, category: 'Clothing' },
-  { id: 4, name: 'Produs 4', price: 150, category: 'Electronics' },
+  { id: 1, name: 'Product 1', price: 100, category: 'Electronics' },
+  { id: 2, name: 'Product 2', price: 200, category: 'Books' },
+  { id: 3, name: 'Product 3', price: 300, category: 'Clothing' },
+  { id: 4, name: 'Product 4', price: 400, category: 'Electronics' },
 ];
 
 const Demo = () => {
@@ -23,7 +23,8 @@ const Demo = () => {
         placeholder='Search...'
         onChange={(e) => setFilter(e.target.value)}
       />
-      <Product className="product"
+      <Product
+        className='product'
         products={initialProducts.filter((product) =>
           product.name.toLowerCase().includes(filter.toLowerCase())
         )}

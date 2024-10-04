@@ -1,29 +1,20 @@
-/* demo.scss */
 .demo {
   padding: 20px;
-  background-color: #eaeaea;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   flex-direction: column;
   gap: 30px;
-  background: linear-gradient(
-    90deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(9, 105, 121, 1) 0%,
-    rgba(0, 212, 255, 1) 100%
-  );
   cursor: default;
 
   .product {
     box-shadow: 0px 0px 22px 9px rgba(0, 0, 0, 0.43);
-    background: transparent;
     border: none;
-    padding: 40px;
+    padding: 50px;
     border-radius: 5px;
     width: 300px;
-    height: 300px§;
+    height: 300px;
   }
 }
 
